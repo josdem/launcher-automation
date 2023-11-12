@@ -26,21 +26,21 @@ public class LauncherTest extends BaseTest {
     }
 
     @And("I validate welcome message is present")
-    public void shouldDisplayWelcomeMessage() throws Exception {
+    public void shouldDisplayWelcomeMessage() {
         log.info("Running: I should be able to see welcome message " + new Date());
         WebElement textView = driver.findElement(By.id("message"));
         assertEquals("Hello", textView.getText());
     }
 
     @And("I click on go button")
-    public void shouldClickOnGoButton() throws Exception {
+    public void shouldClickOnGoButton() {
         log.info("Running: I should click on button " + new Date());
         WebElement button = driver.findElement(By.id("button"));
         button.click();
     }
 
     @Then("I validate launcher message")
-    public void shouldValidateLauncherMessage() throws Exception {
+    public void shouldValidateLauncherMessage() {
         log.info("Running: I should validate launcher message " + new Date());
         WebElement textView = driver.findElement(By.id("message"));
         assertEquals("Launcher!", textView.getText());
