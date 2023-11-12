@@ -29,9 +29,8 @@ public class LauncherTest extends BaseTest {
     @Then("I validate Launcher! message is present")
     public void shouldDisplayCategories() throws Exception {
         log.info("Running: I should be able to see the category list at " + new Date());
-        assumeTrue(driver.findElement(By.id("listViewCategories")) != null);
-        textView = driver.findElement(By.id("categoryTextView"));
-        assertEquals("Healing", textView.getText());
+        textView = driver.findElement(By.id("message"));
+        assertEquals("Hello", textView.getText());
     }
 
 }
