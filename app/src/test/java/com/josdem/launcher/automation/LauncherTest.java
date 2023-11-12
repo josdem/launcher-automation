@@ -32,11 +32,18 @@ public class LauncherTest extends BaseTest {
         assertEquals("Hello", textView.getText());
     }
 
-    @Then("I click on go button")
+    @And("I click on go button")
     public void shouldClickOnGoButton() throws Exception {
         log.info("Running: I should click on button " + new Date());
         WebElement button = driver.findElement(By.id("button"));
         button.click();
+    }
+
+    @Then("I validate launcher message")
+    public void shouldValidateLauncherMessage() throws Exception {
+        log.info("Running: I should validate launcher message " + new Date());
+        WebElement textView = driver.findElement(By.id("message"));
+        assertEquals("Launcher!", textView.getText());
     }
 
 }
