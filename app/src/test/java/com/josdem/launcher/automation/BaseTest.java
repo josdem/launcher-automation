@@ -4,7 +4,6 @@ import com.josdem.launcher.automation.service.AppiumService;
 import com.josdem.launcher.automation.service.impl.AppiumServiceImpl;
 import com.josdem.launcher.automation.util.ConfigurationReader;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
@@ -20,7 +19,7 @@ public class BaseTest {
     private static DesiredCapabilities capabilities = new DesiredCapabilities();
 
     public static AndroidDriver getDriver() throws IOException {
-        if(driver == null){
+        if (driver == null) {
             appiumService.setCapabilities(capabilities);
             driver = new AndroidDriver(new URL(ConfigurationReader.getProperty("appium.server")), capabilities);
             driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigurationReader.getProperty("appium.wait")), TimeUnit.SECONDS);
