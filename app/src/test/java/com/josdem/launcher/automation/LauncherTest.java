@@ -26,9 +26,9 @@ public class LauncherTest extends BaseTest {
         driver = getDriver();
     }
 
-    @Then("I validate Launcher! message is present")
-    public void shouldDisplayCategories() throws Exception {
-        log.info("Running: I should be able to see the category list at " + new Date());
+    @Then("I validate welcome message is present")
+    public void shouldDisplayWelcomeMessage() throws Exception {
+        log.info("Running: I should be able to see welcome message " + new Date());
         textView = driver.findElement(By.id("message"));
         assertEquals("Hello", textView.getText());
     }
