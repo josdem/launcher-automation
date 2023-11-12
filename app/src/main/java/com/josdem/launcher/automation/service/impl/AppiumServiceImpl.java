@@ -16,5 +16,6 @@ public class AppiumServiceImpl implements AppiumService {
         capabilities.setCapability("platformVersion", ConfigurationReader.getProperty("device.version"));
         capabilities.setCapability("appPackage", ConfigurationReader.getProperty("application.package"));
         capabilities.setCapability("appActivity", ConfigurationReader.getProperty("application.activity"));
+        capabilities.setCapability("automationName", ConfigurationReader.getProperty("appium.automator"));
     }
 }
