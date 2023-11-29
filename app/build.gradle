@@ -34,6 +34,7 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-remote-driver:2.44.0'
     implementation 'org.apache.commons:commons-configuration2:2.9.0'
     implementation 'commons-beanutils:commons-beanutils:1.9.4'
+    implementation 'com.applitools:eyes-appium-java:3.172.0'
     testImplementation 'io.cucumber:cucumber-java:7.14.0'
     testImplementation 'io.cucumber:cucumber-junit:7.14.0'
     implementation 'io.appium:java-client:7.6.0'
