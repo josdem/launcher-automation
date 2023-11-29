@@ -33,7 +33,7 @@ public class LauncherTest extends BaseTest {
     @And("I validate welcome message is present")
     public void shouldDisplayWelcomeMessage() {
         log.info("Running: I should be able to see welcome message " + new Date());
-        eyes.open(driver, "launcher-automation", "I validate welcome message is present");
+        eyes.open(driver, "launcher-automation", "I validate launcher message");
         WebElement textView = driver.findElement(By.id("message"));
         assertEquals("Hello", textView.getText());
     }
