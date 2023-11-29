@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
 
@@ -22,7 +23,7 @@ public class BaseTest {
         if (driver == null) {
             appiumService.setCapabilities(capabilities);
             driver = new AndroidDriver(new URL(ConfigurationReader.getProperty("appium.server")), capabilities);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(ConfigurationReader.getProperty("appium.wait"))));
+            driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigurationReader.getProperty("appium.wait")), TimeUnit.SECONDS);
         }
         return driver;
     }
