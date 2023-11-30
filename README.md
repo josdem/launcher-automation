@@ -5,14 +5,22 @@ Launcher Automation
 
 #### Requirements
 
-- [Appium Server](https://appium.io/) version: `2.2.1`
+- [Appium Server](https://appium.io/) version: `2.2.2`
 
 #### To run the project
-
 ```bash
 appium --base-path=/wd/hub
 gradle testDebug
 ```
+
+#### To run the project with Applitools
+```bash
+appium --base-path=/wd/hub
+git checkout applitools
+gradle testDebug
+```
+
+**Note:** Make sure you set a valid Applitools key in [configuration.properties](https://github.com/josdem/launcher-automation/blob/main/app/src/main/res/configuration.properties) file
 
 #### Read this as reference
 
